@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="sr" data-tenant="domacin">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <meta name="description" content="Portal za kuhinju — Kod Domaćina" />
+    <meta name="theme-color" content="#2A1410" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Kuhinja" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/kod-dobrog-domacina/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/kod-dobrog-domacina/apple-touch-icon.png" />
+    <!-- The kitchen's own manifest, in the HTML from the start: iOS Safari reads the manifest link when the page loads and
+         ignores a later change by the app, so a dynamically swapped link made "Add to Home Screen" install the customer app. -->
+    <link rel="manifest" href="/kod-dobrog-domacina/manifest-kuhinja.webmanifest" />
+    <title>Kuhinja · Kod Domaćina</title>
+    <style>
+      /* Splash painted before the JS bundle arrives: the kitchen is dark, so the splash is too. */
+      html, body, #root { height: 100%; margin: 0; }
+      body { background: #2A1410; }
+      .splash { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--color-cream-100, #fff); }
+      .splash-name { font-family: var(--font-display, sans-serif); font-weight: var(--display-weight, 400); font-size: calc(40px * var(--display-scale, 1)); letter-spacing: var(--display-tracking, 0.02em); text-transform: var(--display-case, none); }
+      .splash-sub { font: 600 12px -apple-system, BlinkMacSystemFont, system-ui, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.55; }
+    </style>
+  <style id="tenant-theme">
+ html[data-tenant="domacin"] {
+  --color-cream-50: #FFFBF6;
+  --color-cream-100: #F4ECE1;
+  --color-cream-200: #EADFCF;
+  --color-cream-300: #DCCBB5;
+  --color-cream-400: #BFA88B;
+  --color-azure-100: #F0E4D6;
+  --color-azure-200: #3A1E17;
+  --color-azure-300: #2A1410;
+  --color-azure-400: #1A0B08;
+  --color-on-primary: #FFF8F0;
+  --color-forest-950: #170A07;
+  --color-forest-900: #2A1410;
+  --color-forest-800: #331A14;
+  --color-forest-700: #43251C;
+  --color-forest-600: #5E4034;
+  --color-forest-500: #7E6355;
+  --color-forest-400: #9C8475;
+  --color-flame-100: #F8E3D6;
+  --color-flame-200: #EDBB9E;
+  --color-flame-500: #B5441A;
+  --color-flame-600: #9C3A15;
+  --color-flame-700: #7E2F11;
+  --color-tomato-500: #C0352B;
+  --color-tomato-100: #F8E0DC;
+  --color-basil-500: #4F7F4A;
+  --color-basil-100: #E3EDE1;
+  --color-ink: #24130F;
+  --color-ink-2: #5E4B42;
+  --color-ink-3: #8A766B;
+  --font-display: "Oswald", "Arial Narrow", Impact, sans-serif;
+  --display-scale: 0.86;
+  --display-tracking: 0.01em;
+  --display-case: uppercase;
+  --display-weight: 700;
+  --motif: repeating-linear-gradient(90deg, rgba(90, 56, 28, 0.05) 0 2px, transparent 2px 11px, rgba(90, 56, 28, 0.035) 11px 12px, transparent 12px 23px), repeating-linear-gradient(180deg, #E2CBA8 0 25px, #B8976E 25px 27px, #D9BE97 27px 52px, #B8976E 52px 54px, #E6D1B0 54px 79px, #B8976E 79px 81px);
+  --glass-bg: rgba(244, 236, 225, 0.82);
+ }
+/* self-hosted display font (latin + latin-ext for Serbian diacritics); /kod-dobrog-domacina/ is filled in by vite.config.ts */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/kod-dobrog-domacina/fonts/oswald-700-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/kod-dobrog-domacina/fonts/oswald-700-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+    
+    <script type="module" crossorigin src="/kod-dobrog-domacina/assets/main-LiSE9oP7.js"></script>
+    <link rel="stylesheet" crossorigin href="/kod-dobrog-domacina/assets/main-CQ3Fmxgd.css"><script id="vite-plugin-pwa:register-sw" src="/kod-dobrog-domacina/registerSW.js"></script></head>
+  <body>
+    <div id="root"><div class="splash"><span class="splash-name">KUHINJA</span><span class="splash-sub">Kod Domaćina · Učitavanje</span></div></div>
+  </body>
+</html>

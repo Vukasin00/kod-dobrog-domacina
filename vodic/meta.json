@@ -1,0 +1,47 @@
+{
+  "info": {
+    "id": "domacin",
+    "guideKey": "dd-guide-done",
+    "storageKey": "kod-dobrog-domacina",
+    "fulfillments": [
+      "delivery",
+      "pickup"
+    ],
+    "sizes": 6,
+    "name": "Kod Dobrog Domaćina",
+    "address": "Borska 15G, Beograd",
+    "phone": "060 330 5833",
+    "hours": "Svaki dan 08:00 – 24:00 (Miljakovac nedeljom od 12:00) · dostava do 23:15",
+    "instagram": "https://www.instagram.com/koddobrogdomacina/",
+    "logo": "logo.webp",
+    "deliveryFee": 89,
+    "cardPayment": [],
+    "locations": 2,
+    "categories": 8,
+    "menu": "static",
+    "menuItems": 82,
+    "closedToday": false,
+    "soldOutToday": [],
+    "orders": "local",
+    "tenantPath": "domacin",
+    "emulator": false
+  },
+  "style": {
+    "bg": "#F4ECE1",
+    "card": "#FFFBF6",
+    "inset": "#EADFCF",
+    "line": "#DCCBB5",
+    "primary": "#2A1410",
+    "onPrimary": "#FFF8F0",
+    "dark": "#2A1410",
+    "dark2": "#331A14",
+    "cta": "#B5441A",
+    "ink": "#24130F",
+    "ink2": "#5E4B42",
+    "font": "\"Oswald\", \"Arial Narrow\", Impact, sans-serif",
+    "tracking": "0.01em",
+    "case": "uppercase",
+    "weight": "700",
+    "scale": "0.86"
+  }
+}

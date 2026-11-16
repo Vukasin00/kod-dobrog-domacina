@@ -1,0 +1,26 @@
+{
+  "id": "/kod-dobrog-domacina/kuhinja",
+  "name": "Kod Domaćina · Kuhinja",
+  "short_name": "Kuhinja",
+  "description": "Portal za kuhinju — Kod Dobrog Domaćina",
+  "lang": "sr",
+  "start_url": "/kod-dobrog-domacina/kuhinja",
+  "scope": "/kod-dobrog-domacina/kuhinja",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#2A1410",
+  "background_color": "#2A1410",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

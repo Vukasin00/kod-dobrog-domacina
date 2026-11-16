@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/kod-dobrog-domacina/sw.js', { scope: '/kod-dobrog-domacina/' })})}
